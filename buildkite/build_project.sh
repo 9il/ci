@@ -224,9 +224,14 @@ case "$REPO_FULL_NAME" in
         make -j2 ldc2
         ;;
 
+    atilaneves/unit-threaded)
+        export TERM="${TERM:-xterm-256color}"
+        use_travis_test_script
+        ;;
+
     *)
-    use_travis_test_script
-    ;;
+        use_travis_test_script
+        ;;
 esac
 
 # final cleanup
